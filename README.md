@@ -1,1 +1,2 @@
-# Photography-Portfolio
+#Photography-Portfolio
+#Yaryack photograhy portfolio website, bootstrap 4, fully responsive Includes about, testimonial, gallery, and contact form and mailto: links for sending emails. Template contains: grid, card, & fluid gallery's, horizontal img gallery, img grid with img descriptions. includes css ease-in-out animations. Click on any photo in the grid, card, & fluid gallery's to view photos in a lightbox. Navigate the template easy with the fixed navbar. No need for continuous scrolling to view sections of webpage.
