@@ -35,7 +35,7 @@ const Header = () => {
                     <div className="tag-cmp app__flex">
                         <p className="p-text">
                             Who is Yared, and what does he do? <br/><b> WHO:</b><br />
-                            A small town girl who is fuelled by love and laughter and all the moments in between.
+                            Growing up in Asmera which is fuelled by love and laughter and all the moments in between.
                             <br /> <b>WHAT:</b><br /> 
                              </p>
                         <p className="p-text">  A photographer with a non negotiable goal to capture the moments that make your heart beat extra fast, make you cry happy tears, and laugh until your stomach hurts.
