@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import CloseIcon from '@material-ui/icons/Close';
+import CloseButton from 'react-bootstrap/CloseButton';
 import './gallery.scss';
 import { urlFor, client } from '../../client';
 
@@ -30,7 +30,7 @@ const Wedding = () => {
     {/** model display section for selected imaged */}
       <div className={model? "model open" : "model"}>
       <img src={tempimgUrl} alt='' />
-      <CloseIcon onclick={() => setModel(true)} />
+      <CloseButton variant="white" onclick={() => setModel(true)} />
       </div>
 
 {/**list images will displayed in this section */}
