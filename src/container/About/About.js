@@ -37,7 +37,7 @@ const About = () => {
 
               <motion.div
                 whileHover={{ opacity: [0, 1] }}
-                transition={{ duration: 0.3, ease: 'easeInOut', staggerChildren: 0.5 }}
+                transition={{ duration: 0.5, ease: 'easeInOut', staggerChildren: 0.5 }}
                 className="app__work-hover app__flex"
               >
                 <a href={about.title} rel="noreferrer">
@@ -67,5 +67,5 @@ const About = () => {
 export default AppWrap(
   MotionWrap(About, 'app__about'),
   'about',
-  'app__primarybg',
+  'app__whitebg',
 );

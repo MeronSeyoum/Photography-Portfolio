@@ -37,6 +37,11 @@ const Footer = () => {
 
   return (
     <>
+    <hr  style={{color: '#ffffff',
+    backgroundColor: '#ffffff',
+    height: .5,
+    borderColor : '#000000' }}/>
+
       <h2 className="head-text">Take a coffee & chat with me</h2>
 
       <div className="app__footer-cards">
@@ -82,5 +87,5 @@ const Footer = () => {
 export default AppWrap(
   MotionWrap(Footer, 'app__footer'),
   'contact',
-  'app__whitebg',
+  'app__primarybg',
 );

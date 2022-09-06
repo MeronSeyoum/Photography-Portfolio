@@ -14,9 +14,9 @@ const App = () => {
                     <Header />
                     <Works />
                     <About />
+                   <Testimonials /> 
                     <Skills />
-                    <Testimonials />
-                    <Footer />
+                    
                     </>} />
                 <Route path='family' element={<Family />} />
                 <Route path='engagement' element={<Engagement />} />
@@ -25,6 +25,7 @@ const App = () => {
                 <Route path='maternity' element={<Maternity />} />
                 <Route path='branding' element={<Branding />} />    
             </Routes>
+            <Footer />
         </div>
     )
 }
