@@ -81,6 +81,7 @@
     .app__header-circles {
         flex: 0.75;
         display: flex;
+        margin-top: -5rem;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: flex-start;
@@ -140,10 +141,9 @@
     .app__header-img {
         flex: 1;
         height: 100%;
-        left: 2rem;
         display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
+        justify-content: flex-start;
+        align-items: flex-start;
         position: relative;
         img {
             width: 100%;

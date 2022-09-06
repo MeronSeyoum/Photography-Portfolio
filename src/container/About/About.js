@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { AiFillEye } from 'react-icons/ai';
 
-import { AppWrap, MotionWrap} from '../../wrapper';
+import { AppWrap, MotionWrap } from '../../wrapper';
 import './About.scss';
 import { urlFor, client } from '../../client';
 
@@ -20,26 +21,45 @@ const About = () => {
 
   return (
     <>
-          <h2 className='head-text'>Category of <span>Service</span> We<span> Provide </span> and More...</h2>
-      <div className='app__about'> 
-      <div className="app__profile">
-        {abouts.map((about, index) => (
-          <motion.div
-            whileInView={{ opacity: 1 }}
-            whileHover={{ scale: 1.1 }}
-            transition={{ duration: 0.5, type: 'tween' }}
-            className="app__profile-item"
-            key={about.title + index}
-          >
-      <a href={about.title} >
-            <img src={urlFor(about.imgUrl)} alt={about.title} />
-            </a>     
-            <h2 className="bold-text" style={{ marginTop: 5 }}>{about.title}</h2>
-            <p className="p-text" style={{ marginTop: 5 }}>{about.description}</p>
-          </motion.div>
-        ))}
-         
-      </div>
+      <h2 className='head-text'>Category of <span>Service</span> We<span> Provide </span> and More...</h2>
+      <div className='app__about'>
+        <div className="app__profile">
+          {abouts.map((about, index) => (
+            <motion.div
+              whileInView={{ opacity: 1 }}
+              whileHover={{ scale: 1.1 }}
+              transition={{ duration: 0.5, type: 'tween' }}
+              className="app__profile-item"
+              key={about.title + index}
+            >
+
+              <img src={urlFor(about.imgUrl)} alt={about.title} />
+
+              <motion.div
+                whileHover={{ opacity: [0, 1] }}
+                transition={{ duration: 0.3, ease: 'easeInOut', staggerChildren: 0.5 }}
+                className="app__work-hover app__flex"
+              >
+                <a href={about.title} rel="noreferrer">
+
+                  <motion.div
+                    whileInView={{ scale: [0, 1] }}
+                    whileHover={{ scale: [1, 0.90] }}
+                    transition={{ duration: 0.25 }}
+                    className="app__flex"
+                  >
+                    <AiFillEye />
+                  </motion.div>
+                </a>
+
+              </motion.div>
+
+              <h2 className="bold-text" style={{ marginTop: 5 }}>{about.title}</h2>
+              <p className="p-text" style={{ marginTop: 5 }}>{about.description}</p>
+            </motion.div>
+          ))}
+
+        </div>
       </div>
     </>
   );
@@ -47,5 +67,5 @@ const About = () => {
 export default AppWrap(
   MotionWrap(About, 'app__about'),
   'about',
-  'app__whitebg',
+  'app__primarybg',
 );
