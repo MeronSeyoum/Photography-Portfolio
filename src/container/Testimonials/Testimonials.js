@@ -9,7 +9,7 @@ import './Testimonials.scss';
 const Testimonial = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [testimonials, setTestimonials] = useState([]);
-  const [brands, setBrands] = useState([]);
+  //const [brands, setBrands] = useState([]);
 
   const handleClick = (index) => {
     setCurrentIndex(index);
@@ -17,15 +17,15 @@ const Testimonial = () => {
 
   useEffect(() => {
     const query = '*[_type == "testimonials"]';
-    const brandsQuery = '*[_type == "brands"]';
+    //const brandsQuery = '*[_type == "brands"]';
 
     client.fetch(query).then((data) => {
       setTestimonials(data);
     });
 
-    client.fetch(brandsQuery).then((data) => {
-      setBrands(data);
-    });
+   // client.fetch(brandsQuery).then((data) => {
+     // setBrands(data);
+    //});
   }, []);
 
   return (
@@ -55,7 +55,7 @@ const Testimonial = () => {
         </>
       )}
 
-        <div className="app__testimonial-brands app__flex">
+      {/*   <div className="app__testimonial-brands app__flex">
         {brands.map((brand) => (
           <motion.div
             whileInView={{ opacity: [0, 1] }}
@@ -65,7 +65,7 @@ const Testimonial = () => {
            <img src={urlFor(brand.imgUrl)} alt={brand.name} />
           </motion.div>
         ))}
-      </div>
+      </div>*/}
     </>
   );
 };
