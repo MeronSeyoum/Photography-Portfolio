@@ -21,7 +21,7 @@ const App = () => {
                 <Route path='family' element={<Family />} />
                 <Route path='engagement' element={<Engagement />} />
                 <Route path='kids' element={<Kids />} />
-                <Route path='wedding' render={() => <Wedding />} exact />
+                <Route path='wedding' element= <Wedding /> />
                 <Route path='maternity' element={<Maternity />} />
                 <Route path='branding' element={<Branding />} />    
             </Routes>
