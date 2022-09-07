@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { AiFillEye } from 'react-icons/ai';
+//import { AiFillEye } from 'react-icons/ai';
 
 import { AppWrap, MotionWrap } from '../../wrapper';
 import './About.scss';
@@ -32,15 +32,15 @@ const About = () => {
               className="app__profile-item"
               key={about.title + index}
             >
-
+ <a href={about.title} rel="noreferrer">
               <img src={urlFor(about.imgUrl)} alt={about.title} />
-
-              <motion.div
+</a>
+          {/**    <motion.div
                 whileHover={{ opacity: [0, 1] }}
                 transition={{ duration: 0.5, ease: 'easeInOut', staggerChildren: 0.5 }}
                 className="app__work-hover app__flex"
               >
-                <a href={about.title} rel="noreferrer">
+               
 
                   <motion.div
                     whileInView={{ scale: [0, 1] }}
@@ -50,9 +50,10 @@ const About = () => {
                   >
                     <AiFillEye />
                   </motion.div>
-                </a>
+                  
+                
 
-              </motion.div>
+              </motion.div> */}
 
               <h2 className="bold-text" style={{ marginTop: 5 }}>{about.title}</h2>
               <p className="p-text" style={{ marginTop: 5 }}>{about.description}</p>
