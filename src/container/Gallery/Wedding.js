@@ -3,6 +3,9 @@ import CloseButton from 'react-bootstrap/CloseButton';
 import './gallery.scss';
 import { urlFor, client } from '../../client';
 
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
 const Wedding = () => {
 
   // Sanity: data retrieve from brand Schema in a form of array
@@ -42,7 +45,7 @@ const Wedding = () => {
         {wedding.map((wedd, index) => {
           return (
             <div className='pics' key={index} onClick={() => getImg(urlFor(wedd.imgUrl))}>
-            <img src={urlFor(wedd.imgUrl)} style={{ width: '100%' }} alt={wedd.title} />
+            <LazyLoadImage effect='blur' src={urlFor(wedd.imgUrl)} style={{ width: '100%' }} alt={wedd.title} />
                </div>
           )
         })}

@@ -3,6 +3,11 @@ import CloseButton from 'react-bootstrap/CloseButton';
 import './gallery.scss';
 import { urlFor, client } from '../../client';
 
+
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
+
 const Branding = () => {
 
   // Sanity: data retrieve from brand achive in a form of array
@@ -42,7 +47,12 @@ const Branding = () => {
         {brands.map((brand, index) => {
           return (
             <div className='pics' key={index} onClick={() => getImg(urlFor(brand.imgUrl))}>
-            <img src={urlFor(brand.imgUrl)} style={{ width: '100%' }} alt={brand.title} />
+            <LazyLoadImage 
+            effect='blur'  
+            src={urlFor(brand.imgUrl)} 
+            style={{ width: '100%' }} 
+            alt={brand.title} 
+            placeholderSrc={process.env.PUBLIC_URL + "/logo192.png"}/>
                </div>
           )
         })}
