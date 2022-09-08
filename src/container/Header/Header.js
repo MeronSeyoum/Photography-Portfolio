@@ -77,9 +77,16 @@ const Header = () => {
                     className="overlay_circle"
                    
                />*/}
+
+               
                <button type="button" className="hero-button" onClick={() => navigate("/book")}>
             Book Now &raquo;
        </button>
+
+
+
+
+
        <div className="app__booking">
             <a href= '/'>
         <img src = { images.book }  alt='Yared Yacob'  onClick={() => navigate("/book")}/> 

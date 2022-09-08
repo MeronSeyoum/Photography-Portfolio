@@ -11,3 +11,5 @@ export { default as Engagement } from './Gallery/Engagement'
 export { default as Maternity } from './Gallery/Maternity'
 export { default as Branding } from './Gallery/Branding'
 export { default as Book } from './Booking/Book'
+//export { default as BookingModal } from '../components/Modal/BookingModal'
+

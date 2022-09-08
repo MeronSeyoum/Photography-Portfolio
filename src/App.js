@@ -24,7 +24,8 @@ const App = () => {
                 <Route path='wedding' element= {<Wedding />} />
                 <Route path='maternity' element={<Maternity />} />
                 <Route path='branding' element={<Branding />} />   
-                <Route path='book' element={<Book />} />    
+                <Route path='book' element={<Book />} />   
+              
             </Routes>
             <Footer />
         </div>
