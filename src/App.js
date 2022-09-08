@@ -1,7 +1,7 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom';
 
-import { About, Footer, Family, Header, Skills, Testimonials, Works, Wedding, Maternity, Kids, Branding, Engagement } from './container';
+import { About, Footer, Family, Header, Skills, Testimonials, Works, Wedding, Maternity, Kids, Branding, Engagement , Book} from './container';
 import { Navbar } from './components';
 import './App.scss';
 
@@ -23,7 +23,8 @@ const App = () => {
                 <Route path='kids' element={<Kids />} />
                 <Route path='wedding' element= {<Wedding />} />
                 <Route path='maternity' element={<Maternity />} />
-                <Route path='branding' element={<Branding />} />    
+                <Route path='branding' element={<Branding />} />   
+                <Route path='book' element={<Book />} />    
             </Routes>
             <Footer />
         </div>

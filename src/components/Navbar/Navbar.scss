@@ -1,15 +1,21 @@
 .app__navbar {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 1rem 0rem;
     background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border: 1px solid rgba(255, 255, 255, 0.18);
     position: fixed;
     z-index: 2;
+    @media screen and (max-width: 480px) {
+        justify-content: space-between;
+    }
+    @media screen and (min-width: 487px) and (max-width: 1079px) {
+        justify-content: space-between;
+    }
 }
 
 .app__navbar-logo {

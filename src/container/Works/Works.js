@@ -39,7 +39,6 @@ const Work = () => {
   return (
     <>
       <h2 className="head-text">My Creative <span>Portfolio</span> Section</h2>
-
       <div className="app__work-filter">
         {['Wedding', 'Family', 'Engagement', 'Kids', 'Maternity','Branding','All'].map((item, index) => (
           <div

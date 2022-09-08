@@ -65,7 +65,7 @@ const Header = () => {
             </motion.div>
             <motion.div
                 whileInView={{ opacity: [0, 1] }}
-                transition={{ duration: 0.5, delayChildren: 0.5 }}
+                transition={{ duration: 0.3, delayChildren: 0.5 }}
                 className="app__header-img"
             >
                {/** <img src={images.profile} alt="profile_bg" /> 
@@ -77,10 +77,14 @@ const Header = () => {
                     className="overlay_circle"
                    
                />*/}
-               <button type="button" className="hero-button" onclick={() => navigate("/wedding")}>
+               <button type="button" className="hero-button" onClick={() => navigate("/book")}>
             Book Now &raquo;
        </button>
-            
+       <div className="app__booking">
+            <a href= '/'>
+        <img src = { images.book }  alt='Yared Yacob'  onClick={() => navigate("/book")}/> 
+        </a>
+            </div>
             </motion.div>
             
         </div>
