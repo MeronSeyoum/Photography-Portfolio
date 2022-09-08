@@ -9,9 +9,12 @@ import './Navbar.scss';
 const Navbar = () => {
     const [toggle, setToggle] = useState(false);
 
-    return ( <nav className="app__navbar">
+    return ( 
+    <nav className="app__navbar">
         <div className="app__navbar-logo">
+            <a href= '/'>
         <img href='' src = { images.logo }  alt='Yared Yacob' /> 
+        </a>
         </div> 
         <ul className="app__navbar-links">
             {['home','about','Portfolio','Book','testimonial','contact'].map((item) =>(

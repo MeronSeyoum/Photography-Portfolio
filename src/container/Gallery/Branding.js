@@ -32,28 +32,28 @@ const Branding = () => {
 
   return (
     <>
-    {/** model display section for selected imaged */}
-      <div className={model? "model open" : "model"}>
-      <img src={tempimgUrl} alt='' />
-      <CloseButton variant="white" onclick={() => setModel(true)} />
+      {/** model display section for selected imaged */}
+      <div className={model ? "model open" : "model"}>
+        <img src={tempimgUrl} alt='' />
+        <CloseButton variant="white" onclick={() => setModel(true)} />
       </div>
 
-{/**list image displayed in this section */}
+      {/**list image displayed in this section */}
       <div className='app__header'>
-      <h4 className='head-text'>Branding Photo for <span>Modeling</span> and <span>Commercial</span></h4>
+        <h4 className='head-text'>Branding Photo for <span>Modeling</span> and <span>Commercial</span></h4>
       </div>
       <div className='app__gallery'>
-      
+
         {brands.map((brand, index) => {
           return (
             <div className='pics' key={index} onClick={() => getImg(urlFor(brand.imgUrl))}>
-            <LazyLoadImage 
-            effect='blur'  
-            src={urlFor(brand.imgUrl)} 
-            style={{ width: '100%' }} 
-            alt={brand.title} 
-            placeholderSrc={process.env.PUBLIC_URL + "/logo192.png"}/>
-               </div>
+              <LazyLoadImage
+                effect='blur'
+                src={urlFor(brand.imgUrl)}
+                style={{ width: '100%' }}
+                alt={brand.title}
+                placeholderSrc={process.env.PUBLIC_URL + "/logo192.png"} />
+            </div>
           )
         })}
       </div>

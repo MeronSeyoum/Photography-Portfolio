@@ -37,10 +37,7 @@ const Footer = () => {
 
   return (
     <>
-    <hr  style={{color: '#ffffff',
-    backgroundColor: '#ffffff',
-    height: .5,
-    borderColor : '#000000' }}/>
+    <hr  className='app__hr'/>
 
       <h2 className="head-text">Take a coffee & chat with me</h2>
 

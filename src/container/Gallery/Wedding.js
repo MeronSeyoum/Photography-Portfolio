@@ -32,8 +32,8 @@ const Wedding = () => {
     <>
     {/** model display section for selected imaged */}
       <div className={model? "model open" : "model"}>
-      <img src={tempimgUrl} alt='' />
-      <CloseButton variant="white" onclick={() => setModel(true)} />
+      <img src={tempimgUrl} alt='' style={{ width: '100%' }}/>
+      <CloseButton  variant="black" onclick={() => setModel(true)} />
       </div>
 
 {/**list images will displayed in this section */}
@@ -45,7 +45,12 @@ const Wedding = () => {
         {wedding.map((wedd, index) => {
           return (
             <div className='pics' key={index} onClick={() => getImg(urlFor(wedd.imgUrl))}>
-            <LazyLoadImage effect='blur' src={urlFor(wedd.imgUrl)} style={{ width: '100%' }} alt={wedd.title} />
+           <LazyLoadImage 
+            effect='blur'  
+            src={urlFor(wedd.imgUrl)} 
+            style={{ width: '100%' }} 
+            alt={wedd.title} 
+            placeholderSrc={process.env.PUBLIC_URL + "/logo192.png"}/>
                </div>
           )
         })}
