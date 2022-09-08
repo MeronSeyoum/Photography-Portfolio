@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useState }  from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { AppWrap } from '../../wrapper';
 import { images } from '../../Constansts';
+
+import Calendar from 'react-calendar';
+import './book.scss';
+import 'react-calendar/dist/Calendar.css';
+
 import './Header.scss';
 
 const scalevariants = {
@@ -16,8 +21,20 @@ const scalevariants = {
     }
 }
 const Header = () => {
-    const navigate = useNavigate();
+    const [date, setDate] = useState(new Date());
 
+    const navigate = useNavigate();
+    const [modal, setModal] = useState(false);
+
+    const toggleModal = () => {
+      setModal(!modal);
+    };
+  
+    if(modal) {
+      document.body.classList.add('active-modal')
+    } else {
+      document.body.classList.remove('active-modal')
+    }
     return (
         <div className="app__header app__flex"  >
             <motion.div
@@ -79,12 +96,42 @@ const Header = () => {
                />*/}
 
                
-               <button type="button" className="hero-button" onClick={() => navigate("/book")}>
-            Book Now &raquo;
-       </button>
+               
+{/** Modal for booking appointment  */}
+<button onClick={toggleModal} className="hero-button">
+         Book Now &raquo;
+      </button>
+      {modal && (
+        <div className="modal">
+          <div onClick={toggleModal} className="overlay"></div>
+          <div className="modal-content">
+            
+          <div className='app App__Book'>
+      <h1 className='text-center'>Select Appointment Date</h1>
+      
+      <div className='calendar-container'>
+        <Calendar onChange={setDate} value={date} />
+        
+      </div>
+      <p className='text-center'>
+        <br /> <h2>Selected Availabilities:</h2>
+        <div>
+         
+          <h2 className="book__confirm">{date.toDateString()}
+          <button>{date.toLocaleTimeString()}</button>
+</h2>
+                   </div>
+       
+        
+      </p>
+    </div>
 
-
-
+            <button className="close-modal" onClick={toggleModal}>
+              CLOSE
+            </button>
+          </div>
+        </div>
+      )}
 
 
        <div className="app__booking">
