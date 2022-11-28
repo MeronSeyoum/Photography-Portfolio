@@ -14,7 +14,11 @@ import newborn from '../assets/newborn.png';
 import family from '../assets/family.png';
 import engagement from '../assets/engagement.png';
 import branding from '../assets/branding.png';
-
+import profile1 from '../assets/profile1.png';
+import profile2 from '../assets/profile2.png';
+import slide1 from '../assets/slide1.png';
+import slide2 from '../assets/slide2.png';
+import slide3 from '../assets/slide3.png';
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
     email,
@@ -33,4 +37,9 @@ export default {
     family,
     engagement,
     branding,
+    profile1,
+    profile2,
+    slide1,
+    slide2,
+    slide3,
 };

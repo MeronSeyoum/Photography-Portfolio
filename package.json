@@ -1,6 +1,8 @@
 {
     "name": "frontend",
     "version": "0.1.0",
+    "author": "Meron Seyoum",
+    "description": "",
     "private": true,
     "dependencies": {
         "@sanity/client": "^3.3.6",
@@ -11,6 +13,7 @@
         "availability-calendar-react": "^1.0.10",
         "axios": "^0.27.2",
         "bootstrap": "^5.2.1",
+        "fade-carousel": "^1.1.4",
         "framer-motion": "^7.2.1",
         "node-sass": "^7.0.1",
         "querystring": "^0.2.1",
@@ -22,9 +25,12 @@
         "react-icons": "^4.4.0",
         "react-lazy-load-image-component": "^1.5.5",
         "react-modal": "^3.15.1",
+        "react-resize-image": "^1.0.4",
+        "react-responsive-carousel": "^3.2.23",
         "react-router": "^6.3.0",
         "react-router-dom": "^6.3.0",
         "react-scripts": "5.0.1",
+        "react-slick": "^0.29.0",
         "react-tooltip": "^4.2.21",
         "web-vitals": "^2.1.4",
         "yup": "^0.32.11"

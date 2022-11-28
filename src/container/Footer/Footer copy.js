@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
-
+import { images } from "../../Constansts";
+import { AppWrap, MotionWrap } from "../../wrapper";
 import { client } from "../../client";
 import "./Footer.scss";
 
@@ -41,7 +42,22 @@ const Footer = () => {
 
   return (
     <>
-     
+      <hr className="app__hr" />
+      <h2 className="head-text"> Take a coffee & chat with me </h2>
+      <div className="app__footer-cards">
+        <div className="app__footer-card ">
+          <img src={images.email} alt="email" />
+          <a href="mailto:@gmail.com" className="p-text">
+            gmial @gmial.com
+          </a>
+        </div>
+        <div className="app__footer-card">
+          <img src={images.mobile} alt="phone" />
+          <a href="tel:+1 (123) 456-7890" className="p-text">
+            +1(123) 456 - 7890
+          </a>
+        </div>
+      </div>
       {!isFormSubmitted ? (
         <div className="app__footer-form app__flex">
           <div className="app__flex">
@@ -86,4 +102,8 @@ const Footer = () => {
   );
 };
 
-export default Footer
+export default AppWrap(
+  MotionWrap(Footer, "app__footer"),
+  "contact",
+  "app__primarybg"
+);
