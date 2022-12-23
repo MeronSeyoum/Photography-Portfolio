@@ -29,9 +29,9 @@ const App = () => {
           path="/"
           element={
             <>
-              <HomeCarousels />
-              <About />
-              <Header />
+              {/* <HomeCarousels /> */}
+            <Header /> 
+             <About />  
               <Works />
               <Testimonials />
               <Skills />

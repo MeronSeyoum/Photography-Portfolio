@@ -43,8 +43,8 @@ const Footer = () => {
     <>
      
       {!isFormSubmitted ? (
-        <div className="app__footer-form app__flex">
-          <div className="app__flex">
+        <div className="app__footer-form app__flex ">
+          <div className="app__flex ">
             <input
               className="p-text"
               type="text"
@@ -54,7 +54,7 @@ const Footer = () => {
               onChange={handleChangeInput}
             />
           </div>
-          <div className="app__flex">
+          <div className="app__flex ">
             <input
               className="p-text"
               type="email"

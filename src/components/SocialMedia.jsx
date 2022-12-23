@@ -8,10 +8,12 @@ const SocialMedia = () => (
       <BsTwitter />
     </div>
     <div>
+     
       <FaFacebookF />
     </div>
     <div>
-      <BsInstagram />
+    <a href={`https://www.instagram.com/yaryack_photos`} target="blank">
+      <BsInstagram /></a>
     </div>
   </div>
 );

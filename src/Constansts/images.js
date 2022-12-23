@@ -15,6 +15,7 @@ import family from '../assets/family.png';
 import engagement from '../assets/engagement.png';
 import branding from '../assets/branding.png';
 import profile1 from '../assets/profile1.png';
+import profile0 from '../assets/profile0.png';
 import profile2 from '../assets/profile2.png';
 import slide1 from '../assets/slide1.png';
 import slide2 from '../assets/slide2.png';
@@ -37,6 +38,7 @@ export default {
     family,
     engagement,
     branding,
+    profile0,
     profile1,
     profile2,
     slide1,

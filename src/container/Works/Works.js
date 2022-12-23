@@ -10,7 +10,7 @@ const Work = () => {
   const [works, setWorks] = useState([]);
   const [filterWork, setFilterWork] = useState([]);
   const [activeFilter, setActiveFilter] = useState("All");
- 
+
   useEffect(() => {
     const query = '*[_type == "works"]';
 
@@ -18,26 +18,48 @@ const Work = () => {
       setWorks(data);
       setFilterWork(data);
     });
+
+
+
   }, []);
 
-  const handleWorkFilter = (item) => {
-    setActiveFilter(item);
-     setTimeout(() => {
-     
-      if (item === "All") {
-        setFilterWork(works);
-      } else {
-        setFilterWork(works.filter((work) => work.tags.includes(item)));
+  // const handleWorkFilter = (item) => {
+  //   setActiveFilter(item);
+  //   setTimeout(() => {
+  //     if (item === "All") {
+  //       setFilterWork(works);
+  //     } else {
+  //       setFilterWork(works.filter((work) => work.tags.includes(item)));
+  //     }
+  //   }, 500);
+  // };
+
+  function displayMarqueeElements() {
+    const root = document.documentElement;
+    const marqueeElementsDisplayed = parseInt(getComputedStyle(root).getPropertyValue("--marquee-elements-displayed"));
+    const marqueeContent = document.querySelector("ul.marquee-content");
+  
+    if (marqueeContent) {
+      root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+  
+      for(let i = 0; i < Math.min(marqueeElementsDisplayed, marqueeContent.children.length); i++) {
+        marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
       }
-    }, 500);
-  };
+    } else {
+      console.error("The element with class 'marquee-content' was not found in the document");
+    }
+  }
+
+// Call the displayMarqueeElements function when the page loads
+window.addEventListener("load", displayMarqueeElements);
+  
 
   return (
     <>
       <h2 className="head-text">
         My Creative <span>Portfolio</span> Section
       </h2>
-      <div className="app__work-filter">
+      {/* <div className="app__work-filter">
         {[
           "Wedding",
           "Family",
@@ -57,29 +79,23 @@ const Work = () => {
             {item}
           </div>
         ))}
-      </div>
+      </div> */}
 
-      
-        <div className="container">
-          <Carousel
-            autoPlay
-            infiniteLoop={true}
-            showArrows={true}
-            showThumbs={false}
-            showStatus={false}
-            transitionTime={3000}
-            //animationHandler={'fade'}
-          >{filterWork.map((work, index) => (
-               <div className="App__carousel">
-            <img
-              src={urlFor(work.imgUrl)}
-              alt={work.name}
-              className="app__work-img"
-            />
-            </div>  ))}
-          </Carousel>
+      <div className="container">
+        <div className="marquee">
+          <ul className="marquee-content">
+            {filterWork.map((work, index) => (
+              <li key={index}>
+                <img
+                  src={urlFor(work.imgUrl)}
+                  alt={work.name}
+                  className="app__work-img"
+                />
+              </li>
+            ))}
+          </ul>
         </div>
-    
+      </div>
     </>
   );
 };

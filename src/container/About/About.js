@@ -17,12 +17,14 @@ const About = () => {
       setAbouts(data);
     });
   }, []);
-
+ 
   return (
     <>
       <h2 className="head-text">
        My Work
       </h2>
+      <br/>
+      <br/>
       <div className="app__about">
         <div className="app__profile">
           {abouts.map((about, index) => (
@@ -31,7 +33,7 @@ const About = () => {
              //whileHover={{scale: 1.15}}
              //transition={{ duration: 0.25, ease: 'easeInOut', staggerChildren: 0.5 }}
              className="app__profile-item"
-              key={about.title + index}
+             key={index}
             >
               <a href={about.title} rel="noreferrer">
                 <img src={urlFor(about.imgUrl)} alt={about.title} className="card-image"/>
