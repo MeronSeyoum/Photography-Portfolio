@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import CloseButton from 'react-bootstrap/CloseButton';
+// import CloseButton from 'react-bootstrap/CloseButton';
 import './gallery.scss';
 import "../Works/Works.scss";
 import { urlFor, client } from '../../client';
@@ -48,7 +48,7 @@ const Wedding = () => {
     {/** model display section for selected imaged */}
       <div className={model? "model open" : "model"}>
       <img src={tempimgUrl} alt='' style={{ width: '100%' }}/>
-      <CloseButton  variant="black" onclick={() => setModel(true)} />
+      {/* <CloseButton  variant="black" onclick={() => setModel(true)} /> */}
       </div>
 
 {/**list images will displayed in this section */}
