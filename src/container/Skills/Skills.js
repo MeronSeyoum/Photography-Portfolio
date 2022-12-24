@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 import { AppWrap, MotionWrap } from '../../wrapper';
 import InstagramEmbed from 'react-instagram-embed';
@@ -9,7 +9,7 @@ const Skills = () => {
   return (
     <>
    <InstagramEmbed
-  url='https://instagr.am/p/Zw9o4/'
+  url='https://instagr.am/p/Zw9o4/https://www.instagram.com/yaryack_photos/'
   clientAccessToken='123|456'
   maxWidth={320}
   hideCaption={false}

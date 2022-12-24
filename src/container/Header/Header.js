@@ -52,7 +52,7 @@ const Header = () => {
     <div class="carousel-inner">
       <div class="item active">
       
-      <img src={images.profile0} class="d-block w-100" alt="Cliff Above a Stormy Sea"/>
+      <img src={images.profile0} class="d-block w-100" alt=""/>
   </div>
 
       <div class="item">
@@ -83,12 +83,12 @@ const Header = () => {
         </div>
       </motion.div>
                     </div>
-      <img src={images.profile1} class="d-block w-100" alt="Sunset Over the City"/>
+      <img src={images.profile1} class="d-block w-100" alt=""/>
      
      </div>
     
       <div class="item">
-      <img src={images.profile2} class="d-block w-100" alt="Canyon at Nigh"/>
+      <img src={images.profile2} class="d-block w-100" alt=""/>
     </div>
     </div>
 
